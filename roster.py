@@ -231,9 +231,9 @@ class Ui_MainWindow(QMainWindow):
 
 
 
-                    styles = [dict(selector="th", props=[("text-align", "center")])]
+                    #styles = [dict(selector="th", props=[("text-align", "center")])]
                     df = pd.DataFrame(data_dic)
-                    df.style.set_table_styles(styles)
+                    #df.style.set_table_styles(styles)
                     df.to_excel('output.xlsx', header=None, index=False)
                     print("Writing Done!")
                     print(path_openfile_name)
@@ -257,7 +257,7 @@ class Ui_MainWindow(QMainWindow):
             print("err1", e)
             QMessageBox.warning(self,
                                 "转换错误",
-                                "请先导入原始数据和正确的列数！",
+                                str(e),
                                 QMessageBox.Yes)
 
     def create_convert_table_show(self):
