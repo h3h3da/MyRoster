@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['roster.py'],
-             pathex=['D:\\dev\\MyRoster'],
+             pathex=['c:\\python38\\lib\\site-packages', 'D:\\dev\\MyRoster'],
              binaries=[],
              datas=[],
-             hiddenimports=[],
+             hiddenimports=['openpyxl', 'jinja2'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],

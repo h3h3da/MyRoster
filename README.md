@@ -7,7 +7,7 @@
 `pip3 install PyInstaller`
 
 指定icon并生成exe:
-`pyinstaller -F -w --icon=mail-roster.ico roster.py`
+`pyinstaller -w --icon=icon.ico roster.py -F -p c:\python38\lib\site-packages --hidden-import openpyxl --hidden-import jinja2`
 
 ## 效果图
 ![](./img/UI.png)
